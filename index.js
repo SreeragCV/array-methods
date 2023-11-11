@@ -21,7 +21,8 @@ function reverse() {
   console.log("reverse:", array);
 }
 
-//sort(): This method sorts the elements of an array in place and returns the sorted array. It can take an optional compare function as an argument.
+//sort(): This method sorts the elements of an array in place and returns the sorted array.
+//It can take an optional compare function as an argument.
 function sort() {
   const array = ["banana", "apple", "orange", "grapes"];
   array.sort();
@@ -50,24 +51,37 @@ function from() {
   console.log("from:", array);
 }
 
-//join(): This method joins all the elements of an array into a string using a specified separator. It takes one optional argument: the separator to use.
-function join(){
+//join(): This method joins all the elements of an array into a string using a specified separator.
+//It takes one optional argument: the separator to use.
+function join() {
   const array = ["banana", "apple", "orange", "grapes"];
   const join = array.join(", ");
   console.log("join:", join);
 }
 
 //toString(): This method returns a string representing the array and its elements.
-function toString(){
+function toString() {
   const array = ["banana", "apple", "orange", "grapes"];
   const toString = array.toString();
   console.log("toString:", toString);
 }
 
 //pop(): This method removes the last element from an array and returns that element
-function pop(){
+function pop() {
   const array = ["banana", "apple", "orange", "grapes"];
   const pop = array.pop();
   console.log("pop:", pop);
   console.log("original array:", array);
 }
+
+//forEach() method executes a provided function once for each array element. It doesn't return anything,
+//it just executes the callback function on each element of the array.
+
+function forEach() {
+  const array = ["banana", "apple", "orange", "grapes"];
+  array.map((element) => {
+    console.log("forEach:", element);
+  })
+}
+
+forEach();
