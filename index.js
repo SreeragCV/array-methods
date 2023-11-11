@@ -39,7 +39,7 @@ function at() {
 function fill() {
   const array = ["banana", "apple", "orange", "grapes"];
   array.fill("apple", 3, 0);
-  console.log(array);
+  console.log("fill:", array);
 }
 
 //from(): This method creates a new array from an array-like object or an iterable object.
@@ -47,5 +47,27 @@ function fill() {
 function from() {
   const obj = { 0: "banana", 1: "apple", 2: "orange", 3: "grapes", length: 5 };
   const array = Array.from(obj);
-  console.log(array);
+  console.log("from:", array);
+}
+
+//join(): This method joins all the elements of an array into a string using a specified separator. It takes one optional argument: the separator to use.
+function join(){
+  const array = ["banana", "apple", "orange", "grapes"];
+  const join = array.join(", ");
+  console.log("join:", join);
+}
+
+//toString(): This method returns a string representing the array and its elements.
+function toString(){
+  const array = ["banana", "apple", "orange", "grapes"];
+  const toString = array.toString();
+  console.log("toString:", toString);
+}
+
+//pop(): This method removes the last element from an array and returns that element
+function pop(){
+  const array = ["banana", "apple", "orange", "grapes"];
+  const pop = array.pop();
+  console.log("pop:", pop);
+  console.log("original array:", array);
 }
