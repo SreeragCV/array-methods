@@ -128,10 +128,28 @@ function concat() {
 function splice() {
   const fruits = ['apple', 'orange', 'grapes', 'banana'];
   //const splice = fruits.splice(start, deleteCount, item1, item2, ...itemN);
-  const splice = fruits.splice(1, 2, 'mango', 'cherry');
-  console.log(fruits);
+  const splice = fruits.splice(1, 2);
   console.log('splice:', splice);
   console.log('array:', fruits);
 }
 
-splice();
+//flat() This method creates a new array with all sub-array elements concatenated into it recursively up to the specified depth.
+function unshift() {
+  const fruits = ['apple',[ 'orange', ['grapes']], 'banana'];
+  const flat = fruits.flat(Infinity);
+  console.log('flat-method', flat);
+  console.log('array:', fruits);
+}
+
+//lastIndexOf() This method returns the last index at which a given element can be found in the array.
+function lastIndexOf() {
+  const numbers = [1,2,3,4,5,6,3];
+  const lastIndexOf = numbers.lastIndexOf(3);
+  console.log('lastIndexOf;', lastIndexOf);
+  console.log('array:', numbers);
+}
+
+lastIndexOf();
+
+
+
