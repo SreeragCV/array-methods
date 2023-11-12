@@ -102,9 +102,36 @@ function copyWithin() {
 
 //push() method adds one or more elements to the end of an array and returns the new length of the array.
 function push() {
-  let fruits = ['apple', 'orange', 'grapes', 'banana'];
+  const fruits = ['apple', 'orange', 'grapes', 'banana'];
   const push = fruits.push('jackfruit');
   console.log(push);
   console.log('array:', fruits);
 }
 
+//unshift() method adds one or more elements to the beginning of an array and returns the new length of the array.
+function unshift() {
+  const fruits = ['apple', 'orange', 'grapes', 'banana'];
+  const unshift = fruits.unshift('jackfruit');
+  console.log('length:', unshift);
+  console.log('array:', fruits);
+}
+
+//concat() method is used to merge two or more arrays. This method does not change the existing arrays, but instead returns a new array.
+function concat() {
+  const fruits = ['apple', 'orange', 'grapes', 'banana'];
+  const vegetables = ['onion', 'carrot', 'cucumber'];
+  const concat = fruits.concat(vegetables);
+  console.log('new array:', concat);
+}
+
+//splice() method changes the contents of an array by removing or replacing existing elements and/or adding new elements in place.
+function splice() {
+  const fruits = ['apple', 'orange', 'grapes', 'banana'];
+  //const splice = fruits.splice(start, deleteCount, item1, item2, ...itemN);
+  const splice = fruits.splice(1, 2, 'mango', 'cherry');
+  console.log(fruits);
+  console.log('splice:', splice);
+  console.log('array:', fruits);
+}
+
+splice();
