@@ -55,7 +55,7 @@ function from() {
 //It takes one optional argument: the separator to use.
 function join() {
   const array = ["banana", "apple", "orange", "grapes"];
-  const join = array.join(", ");
+  const join = array.join("..! ");
   console.log("join:", join);
 }
 
@@ -81,7 +81,30 @@ function forEach() {
   const array = ["banana", "apple", "orange", "grapes"];
   array.map((element) => {
     console.log("forEach:", element);
-  })
+  });
 }
 
-forEach();
+//shift() method removes the first element from an array and returns that removed element. This method changes the length of the array.
+function shift() {
+  const array = ["banana", "apple", "orange", "grapes"];
+  const shift = array.shift();
+  console.log(shift);
+  console.log("original array:", array);
+}
+
+//copyWithin() method shallow copies part of an array to another location in the same array and
+//returns the modified array without modifying its length. Syntax.copyWithin(target, start, end).
+function copyWithin() {
+  let numbers = [1, 2, 3, 4, 5];
+  numbers.copyWithin(2, 0, 2);
+  console.log(numbers);
+}
+
+//push() method adds one or more elements to the end of an array and returns the new length of the array.
+function push() {
+  let fruits = ['apple', 'orange', 'grapes', 'banana'];
+  const push = fruits.push('jackfruit');
+  console.log(push);
+  console.log('array:', fruits);
+}
+
