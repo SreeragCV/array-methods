@@ -134,10 +134,10 @@ function splice() {
 }
 
 //flat() This method creates a new array with all sub-array elements concatenated into it recursively up to the specified depth.
-function unshift() {
+function flat() {
   const fruits = ['apple',[ 'orange', ['grapes']], 'banana'];
-  const flat = fruits.flat(Infinity);
-  console.log('flat-method', flat);
+  const flat = fruits.flat();
+  console.log('flat-method:', flat);
   console.log('array:', fruits);
 }
 
@@ -145,11 +145,21 @@ function unshift() {
 function lastIndexOf() {
   const numbers = [1,2,3,4,5,6,3];
   const lastIndexOf = numbers.lastIndexOf(3);
-  console.log('lastIndexOf;', lastIndexOf);
+  console.log('lastIndexOf:', lastIndexOf);
   console.log('array:', numbers);
 }
 
-lastIndexOf();
+//indexOf(): This method returns the index of the first occurrence of a specified element in an array. If the element is not present, 
+//it returns -1.
+function indexOf() {
+  const numbers = [1,2,3,4,5,6,3];
+  const indexOf = numbers.indexOf(3);
+  console.log('indexOf:', indexOf);
+}
 
-
+//of(): This method creates a new array instance with a variable number of arguments, regardless of number or type of the arguments.
+function of() {
+  const arr = Array.of('string', 2, true, null, undefined);
+  console.log(arr);
+}
 
