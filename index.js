@@ -195,3 +195,31 @@ function findIndex() {
   const result = numbers.findIndex(greaterThan30);
   console.log(result);
 }
+
+// find(): This method returns the value of the first element in an array that passes a test (provided as a function). 
+// If no element passes the test, it returns undefined.
+function find() {
+  const numbers = [10, 20, 30, 40, 50, 60];
+  const greaterThan30 = (x) => x > 30;
+  const result = numbers.find(greaterThan30);
+  console.log(result);
+}
+
+// includes(): This method determines whether an array includes a certain value among its entries, returning true or false as appropriate.
+function includes() {
+  const numbers = [10, 20, 30, 40, 50, 60];
+  const has20 = numbers.includes(20)
+  console.log(has20);
+}
+
+// entries(): This method returns a new Array Iterator object that contains the key/value pairs for each index in the array.
+function entries() {
+  const array = ["apple", "orange", "grapes", "banana", "mango", "kiwi", "melon", "watermelon"];
+  const fruits = array.entries()
+  // to make the fruits entries into objects
+  // const obj = Object.fromEntries(fruits)
+  // console.log(obj);
+  for(let fruit of fruits){
+    console.log(fruit);
+  }
+}
