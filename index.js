@@ -223,3 +223,24 @@ function entries() {
     console.log(fruit);
   }
 }
+
+// reduce(): This method applies a function to each element of an array and reduces the array to a single value.
+// Regular expression to match email addresses
+function reduce(){
+  const numbers = ['apple', 'orange', 'banana', 'grapes'];
+  const sum = numbers.reduce((accumulator, currentValue) => {
+    return accumulator.concat(', ',currentValue)
+  });
+  console.log(sum);
+}
+
+// reduceRight(): This method is similar to the reduce() method. However, it iterates over the array elements from right to left instead of from left to right.
+function reduceRight(){
+  const numbers = ['apple', 'orange', 'banana', 'grapes'];
+  const sum = numbers.reduceRight((accumulator, currentValue) => {
+    return accumulator.concat(', ',currentValue)
+  });
+  console.log(sum);
+}
+
+reduceRight();
