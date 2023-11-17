@@ -227,7 +227,7 @@ function entries() {
 // reduce(): This method applies a function to each element of an array and reduces the array to a single value.
 // Regular expression to match email addresses
 function reduce(){
-  const numbers = ['apple', 'orange', 'banana', 'grapes'];
+  const fruits = ['apple', 'orange', 'banana', 'grapes'];
   const sum = numbers.reduce((accumulator, currentValue) => {
     return accumulator.concat(', ',currentValue)
   });
@@ -236,11 +236,46 @@ function reduce(){
 
 // reduceRight(): This method is similar to the reduce() method. However, it iterates over the array elements from right to left instead of from left to right.
 function reduceRight(){
-  const numbers = ['apple', 'orange', 'banana', 'grapes'];
+  const fruits = ['apple', 'orange', 'banana', 'grapes'];
   const sum = numbers.reduceRight((accumulator, currentValue) => {
     return accumulator.concat(', ',currentValue)
   });
   console.log(sum);
 }
 
-reduceRight();
+// isArray(): This method determines whether the passed value is an array or not.
+function isArray(){
+  const fruits = ['apple', 'orange', 'banana', 'grapes'];
+  console.log(Array.isArray(fruits));
+  const numbers = 123;
+  console.log(Array.isArray(numbers));
+}
+
+// filter(): This method creates a new array with all elements that pass the test implemented by the provided function.
+function filter(){
+  const numbers = [10, 20, 30, 40, 50, 60];
+  const filteredNumbers = numbers.filter((number) => {
+    return number > 30;
+  })
+  console.log(filteredNumbers);
+}
+
+// keys(): This method returns an array containing the keys of the given object.
+function keys(){
+  const objs = {name: 'Sreerag', age: 24, location: 'Kerala'}
+  const objKeysIntoArrays = Object.keys(objs);
+  console.log(objKeysIntoArrays);
+}
+
+// values(): This method returns an array containing the values of the given object.
+function objectValues(){
+  const objs = {name: 'Sreerag', age: 24, location: 'Kerala'}
+  const objValuesIntoArrays = Object.values(objs);
+  console.log(objValuesIntoArrays);
+}
+
+
+
+
+
+
