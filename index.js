@@ -274,8 +274,11 @@ function objectValues(){
   console.log(objValuesIntoArrays);
 }
 
-
-
-
-
-
+// map(): This method creates a new array with the results of calling a provided function on every element in the calling array.
+function map(){
+  const numbers = [10, 20, 30, 40, 50, 60];
+  const squaredNumbers = numbers.map((number) => {
+    return number * number;
+  })
+  console.log(squaredNumbers);
+}
