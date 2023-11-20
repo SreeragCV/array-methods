@@ -180,11 +180,10 @@ function slice() {
 }
 
 // flatMap(): This method maps each element using a mapping function, then flattens the result into a new array.
-function slice() {
+function flatMap() {
   const numbers = [2, 4, 6, 8, 10];
   const flatMap = numbers.flatMap(x => [x * 2]);
   console.log(flatMap);
-
 }
 
 // findIndex(): This method returns the index of the first element in an array that passes a test (provided as a function). 
