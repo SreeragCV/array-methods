@@ -174,7 +174,16 @@ function every() {
 // slice(): This method returns a shallow copy of a portion of an array into a new array object
 // selected from begin to end (end not included)
 function slice() {
-  const fruits = ["apple", "orange", "grapes", "banana", "mango", "kiwi", "melon", "watermelon"];
+  const fruits = [
+    "apple",
+    "orange",
+    "grapes",
+    "banana",
+    "mango",
+    "kiwi",
+    "melon",
+    "watermelon",
+  ];
   const slice = fruits.slice(1, 3);
   console.log(slice);
 }
@@ -182,11 +191,11 @@ function slice() {
 // flatMap(): This method maps each element using a mapping function, then flattens the result into a new array.
 function flatMap() {
   const numbers = [2, 4, 6, 8, 10];
-  const flatMap = numbers.flatMap(x => [x * 2]);
+  const flatMap = numbers.flatMap((x) => x * 2);
   console.log(flatMap);
 }
 
-// findIndex(): This method returns the index of the first element in an array that passes a test (provided as a function). 
+// findIndex(): This method returns the index of the first element in an array that passes a test (provided as a function).
 // If no element passes the test, it returns -1.
 function findIndex() {
   const numbers = [10, 20, 30, 40, 50, 60];
@@ -195,7 +204,7 @@ function findIndex() {
   console.log(result);
 }
 
-// find(): This method returns the value of the first element in an array that passes a test (provided as a function). 
+// find(): This method returns the value of the first element in an array that passes a test (provided as a function).
 // If no element passes the test, it returns undefined.
 function find() {
   const numbers = [10, 20, 30, 40, 50, 60];
@@ -207,77 +216,93 @@ function find() {
 // includes(): This method determines whether an array includes a certain value among its entries, returning true or false as appropriate.
 function includes() {
   const numbers = [10, 20, 30, 40, 50, 60];
-  const has20 = numbers.includes(20)
+  const has20 = numbers.includes(20);
   console.log(has20);
 }
 
 // entries(): This method returns a new Array Iterator object that contains the key/value pairs for each index in the array.
 function entries() {
-  const array = ["apple", "orange", "grapes", "banana", "mango", "kiwi", "melon", "watermelon"];
-  const fruits = array.entries()
+  const array = [
+    "apple",
+    "orange",
+    "grapes",
+    "banana",
+    "mango",
+    "kiwi",
+    "melon",
+    "watermelon",
+  ];
+  const fruits = array.entries();
   // to make the fruits entries into objects
   // const obj = Object.fromEntries(fruits)
   // console.log(obj);
-  for(let fruit of fruits){
+  for (let fruit of fruits) {
     console.log(fruit);
   }
 }
 
 // reduce(): This method applies a function to each element of an array and reduces the array to a single value.
 // Regular expression to match email addresses
-function reduce(){
-  const fruits = ['apple', 'orange', 'banana', 'grapes'];
-  const sum = numbers.reduce((accumulator, currentValue) => {
-    return accumulator.concat(', ',currentValue)
+function reduce() {
+  const fruits = ["apple", "orange", "banana", "grapes"];
+  const sum = fruits.reduce((accumulator, currentValue) => {
+    return accumulator.concat(", ", currentValue);
   });
   console.log(sum);
 }
 
 // reduceRight(): This method is similar to the reduce() method. However, it iterates over the array elements from right to left instead of from left to right.
-function reduceRight(){
-  const fruits = ['apple', 'orange', 'banana', 'grapes'];
-  const sum = numbers.reduceRight((accumulator, currentValue) => {
-    return accumulator.concat(', ',currentValue)
+function reduceRight() {
+  const fruits = ["apple", "orange", "banana", "grapes"];
+  const sum = fruits.reduceRight((accumulator, currentValue) => {
+    return accumulator.concat(", ", currentValue);
   });
   console.log(sum);
 }
 
 // isArray(): This method determines whether the passed value is an array or not.
-function isArray(){
-  const fruits = ['apple', 'orange', 'banana', 'grapes'];
+function isArray() {
+  const fruits = ["apple", "orange", "banana", "grapes"];
   console.log(Array.isArray(fruits));
   const numbers = 123;
   console.log(Array.isArray(numbers));
 }
 
 // filter(): This method creates a new array with all elements that pass the test implemented by the provided function.
-function filter(){
+function filter() {
   const numbers = [10, 20, 30, 40, 50, 60];
   const filteredNumbers = numbers.filter((number) => {
     return number > 30;
-  })
+  });
   console.log(filteredNumbers);
 }
 
 // keys(): This method returns an array containing the keys of the given object.
-function keys(){
-  const objs = {name: 'Sreerag', age: 24, location: 'Kerala'}
+function keys() {
+  const objs = { name: "Sreerag", age: 24, location: "Kerala" };
   const objKeysIntoArrays = Object.keys(objs);
   console.log(objKeysIntoArrays);
 }
 
 // values(): This method returns an array containing the values of the given object.
-function objectValues(){
-  const objs = {name: 'Sreerag', age: 24, location: 'Kerala'}
+function objectValues() {
+  const objs = { name: "Sreerag", age: 24, location: "Kerala" };
   const objValuesIntoArrays = Object.values(objs);
   console.log(objValuesIntoArrays);
 }
 
 // map(): This method creates a new array with the results of calling a provided function on every element in the calling array.
-function map(){
+function map() {
   const numbers = [10, 20, 30, 40, 50, 60];
   const squaredNumbers = numbers.map((number) => {
     return number * number;
-  })
+  });
   console.log(squaredNumbers);
 }
+
+function sortNumber() {
+  const points = [40, 100, 0, 1, 5, 25];
+  points.sort((a, b) => a - b);
+  console.log(points);
+}
+
