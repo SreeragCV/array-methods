@@ -39,15 +39,16 @@ function at() {
 // It can take up to three arguments: the value to fill with, the start index, and the end index.
 function fill() {
   const array = ["banana", "apple", "orange", "grapes"];
-  array.fill("apple", 3, 0);
+  array.fill("apple", 0, 4);
   console.log("fill:", array);
 }
 
 // from(): This method creates a new array from an array-like object or an iterable object.
 // It can take up to two arguments: the object to convert to an array, and a mapping function to apply to each element of the new array.
 function from() {
-  const obj = { 0: "banana", 1: "apple", 2: "orange", 3: "grapes", length: 5 };
+  const obj = { 0: "banana", 1: "apple", 2: "orange", 3: "grapes", length: 3 };
   const array = Array.from(obj);
+  const myname = Array.from("sreerag");
   console.log("from:", array);
 }
 
@@ -127,7 +128,7 @@ function concat() {
 function splice() {
   const fruits = ["apple", "orange", "grapes", "banana"];
   //const splice = fruits.splice(start, deleteCount, item1, item2, ...itemN);
-  const splice = fruits.splice(1, 2);
+  const splice = fruits.splice(1, 2, "grapes");
   console.log("splice:", splice);
   console.log("array:", fruits);
 }
@@ -305,4 +306,3 @@ function sortNumber() {
   points.sort((a, b) => a - b);
   console.log(points);
 }
-
